@@ -15,7 +15,13 @@ Lumen is a native screen recorder and presentation editor for **Omarchy's Hyprla
 
 The interface uses **GTK 4 and libadwaita**, capture uses **GPU Screen Recorder**, and preview/export uses **FFmpeg**. Recordings, edit recipes, and optional speech transcription stay on your computer. No cloud account is required.
 
-[Get started](#get-started) · [User guide](docs/USAGE.md) · [MCP guide](docs/MCP.md) · [Captions & layers](docs/CAPTIONS.md) · [Contribute](docs/DEVELOPMENT.md) · [Support](#support-the-work)
+[Get started](#get-started) · [Mac fork](docs/MACOS.md) · [User guide](docs/USAGE.md) · [MCP guide](docs/MCP.md) · [Captions & layers](docs/CAPTIONS.md) · [Contribute](docs/DEVELOPMENT.md) · [Support](#support-the-work)
+
+## macOS fork
+
+This fork contains an early native **Lumen for Mac** app alongside the original Omarchy code. The Mac MVP uses SwiftUI and ScreenCaptureKit to record a selected display, optionally include system audio, and save local H.264 MP4 files under `~/Movies/Lumen`. Build, privacy, and current feature limits are documented in [docs/MACOS.md](docs/MACOS.md).
+
+The original Python/GTK application remains Omarchy-specific; the new `Sources/LumenMac*` code is the separate macOS implementation.
 
 ## Built for Omarchy
 
