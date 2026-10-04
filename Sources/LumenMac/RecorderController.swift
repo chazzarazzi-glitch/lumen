@@ -38,12 +38,13 @@ final class RecorderController: NSObject, ObservableObject {
         guard !isBusy else { return }
         do {
             let content = try await SCShareableContent.current
-            let options = content.displays.map { display in
+            let options = content.displays.enumerated().map { index, display in
                 let width = Int(display.width)
                 let height = Int(display.height)
+                let mainLabel = CGDisplayIsMain(display.displayID) != 0 ? " (Main)" : ""
                 return DisplayOption(
                     id: display.displayID,
-                    name: "Display \(display.displayID) — \(width) × \(height)"
+                    name: "Display \(index + 1)\(mainLabel) — \(width) × \(height)"
                 )
             }
             displays = options
