@@ -26,5 +26,7 @@
     <string>15.0</string>
     <key>NSHighResolutionCapable</key>
     <true/>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>Lumen records the display you select and saves the recording locally on this Mac.</string>
 </dict>
 </plist>
